@@ -17,6 +17,7 @@ Make sure you have installed all of the following prerequisites on your machine:
 - Python packages :
   - Requests : `pip install requests`
   - Beautiful Soup :  `pip install bs4`
+  - Clint : `pip install clint`
 
 ## Usage
 
