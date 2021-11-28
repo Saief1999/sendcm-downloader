@@ -1,6 +1,6 @@
 # Sendcm Folder Downloader 
 
-a small script that gives the ability to download whole folders from send.cm
+a small tool that gives the ability to download whole folders from send.cm
 
 ![demo](./resources/demo.gif)
 
@@ -8,9 +8,9 @@ a small script that gives the ability to download whole folders from send.cm
 
 ## Disclaimer 
 
-Support for all kinds of files still needs some testing, feel free to report any bug you find! 
+Support for all kinds of files still needs some testing, feel free to report any bugs you find! 
 
-## prerequisites
+## Prerequisites
 
 Make sure you have installed all of the following prerequisites on your machine:
 - Python 
