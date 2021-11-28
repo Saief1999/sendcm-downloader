@@ -97,7 +97,7 @@ class SendcmDownloader:
 if __name__ == "__main__":
     args = sys.argv[1:] 
     dest_folder = os.path.dirname(__file__)
-    if len(args == 0):
+    if len(args) == 0:
         print("Folder Link is required!")
         sys.exit(0)
 
