@@ -26,4 +26,4 @@ python sendcm_downloader.py [folder_link] [local_path]
 ```
 
 - `folder_link`: The Folder URL 
-- `local_path` [Optional] : the folder you want to save the file to, defaults to the current path
+- `local_path` [Optional] : the folder you want to save your files in, defaults to the current folder
