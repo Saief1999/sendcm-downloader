@@ -1,6 +1,5 @@
 import requests
 from clint.textui import progress
-import os
 
 class FileDownloader:
     """
@@ -18,17 +17,15 @@ class FileDownloader:
             redirected_response = self.session.post(url, data=form_encoded,
                 headers={'Content-Type': 'application/x-www-form-urlencoded'},
                 allow_redirects=False)
-                
-            return self.session.get(redirected_response.headers["Location"], stream=not self.noprogress)
-
-        return self.session.get(url, stream=not self.noprogress)
+            return redirected_response.headers["Location"]
+        return url
 
     def download(self, url:str, name:str="file", form_encoded=None):
         """
         Downloads a file
         """
             
-        response = self.download_request(url, form_encoded=form_encoded)
+        response = self.session.get(self.download_request(url, form_encoded=form_encoded), stream=not self.noprogress)
         filepath=f"{self.dest_folder}/{name}"
         if response.status_code == 200:
             if self.noprogress:
