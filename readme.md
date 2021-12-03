@@ -18,6 +18,7 @@ Make sure you have installed all of the following prerequisites on your machine:
   - Requests : `pip install requests`
   - Beautiful Soup :  `pip install bs4`
   - Clint : `pip install clint`
+  - Lxml Parser: `pip install lxml`
 
 ## Usage
 
