@@ -34,3 +34,4 @@ class FileDownloader:
                 for chunk in progress.bar(response.iter_content(chunk_size=1024), expected_size=(total_length/1024) + 1):
                     if chunk:
                         f.write(chunk)   
+                        f.flush()
