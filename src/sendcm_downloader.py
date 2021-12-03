@@ -7,7 +7,7 @@ from file_downloader import FileDownloader
 class SendcmDownloader:
     """Downloads Send.cm Folders
     """
-    def __init__(self, folder_link:str, dest_folder:str) -> None:
+    def __init__(self, folder_link:str, dest_folder:str, noprogress=False) -> None:
         """ 
         Args:
             folder_link (str): The send.cm folder link
@@ -19,7 +19,7 @@ class SendcmDownloader:
         self.dest_folder = f"{dest_folder}/{folder_name}"
         if not os.path.exists(self.dest_folder):
             os.mkdir(self.dest_folder)
-        self.file_downloader = FileDownloader(self.dest_folder)
+        self.file_downloader = FileDownloader(self.dest_folder, noprogress=noprogress)
 
     def get_folder_content(self):
         """Gets all the files in a Folder
@@ -73,14 +73,22 @@ class SendcmDownloader:
 if __name__ == "__main__":
     args = sys.argv[1:] 
     dest_folder = os.path.dirname(__file__)
+    noprogress=False
     if len(args) == 0:
         print("Folder Link is required!")
         sys.exit(0)
 
     folder_link = args[0]    
     if (len(args) >= 2):
-        dest_folder = args[1]
+        if args[1] == '--noprogress':
+            noprogress = True
+        else :
+            dest_folder = args[1]
 
-    downloader = SendcmDownloader(folder_link, dest_folder.rstrip("/"))
+    if (len(args) >=3):
+        if args[2] == '--noprogress':
+            noprogress = True 
+
+    downloader = SendcmDownloader(folder_link, dest_folder.rstrip("/"), noprogress)
     downloader.get_folder_content()
     

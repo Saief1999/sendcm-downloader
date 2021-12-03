@@ -23,8 +23,9 @@ Make sure you have installed all of the following prerequisites on your machine:
 ## Usage
 
 ```
-python sendcm_downloader.py [folder_link] [local_path]
+python sendcm_downloader.py [folder_link] [local_path] {--noprogress}
 ```
 
 - `folder_link`: The Folder URL 
 - `local_path` [Optional] : the folder you want to save your files in, defaults to the current folder
+- `--noprogress` [Optional] : If, for some reason, you don't want to show the progress of downloading the files
