@@ -2,15 +2,11 @@
 
 <a href="https://colab.research.google.com/github/Saief1999/sendcm-downloader/blob/main/Colab.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
-a small tool that gives the ability to download whole folders from send.cm
+A small tool that gives you the ability to download whole folders from send.cm
 
 ![demo](./resources/demo.gif)
 
 
-
-## Disclaimer 
-
-Support for all kinds of files still needs some testing, feel free to report any bugs you find! 
 
 ## Prerequisites
 
